@@ -6,7 +6,30 @@ import getMedia from '../utilities/getMedia.utility.js';
 
 //test
 import mongoose from 'mongoose';
-import Products from '../models/Products.js';
+import {
+	modelBE,
+	modelBG,
+	modelCZ,
+	modelDE,
+	modelEE,
+	modelEN,
+	modelES,
+	modelFR,
+	modelHR,
+	modelHU,
+	modelIT,
+	modelLT,
+	modelLV,
+	modelME,
+	modelNL,
+	modelPL,
+	modelRO,
+	modelRS,
+	modelRU,
+	modelSI,
+	modelSK,
+	modelUK,
+} from '../models/Products.js';
 
 dotenv.config();
 
@@ -51,7 +74,7 @@ const xmlToDb = async (data, mediaData) => {
 	const attributes = getAttrs(data);
 	const media = getMedia(mediaData);
 
-	const newProduct = new Products({
+	const newProduct = new PL({
 		id,
 		variantId,
 		sku,
